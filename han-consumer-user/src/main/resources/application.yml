@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: han-consumer-user
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka
+  instance:
+    # 是否使用ip显示
+    prefer-ip-address: true
+    # 命名规则自定义
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+ribbon:
+  eureka:
+    enabled: false
+# 项目的provider-user module 的application name
+han-provider-user:
+  ribbon:
+#    listOfServers: localhost:8001
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
