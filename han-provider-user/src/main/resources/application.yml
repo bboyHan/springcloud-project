@@ -1,0 +1,30 @@
+server:
+  port: 8001
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: mysql
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/bboyhan?useUnicode=true&characterEncoding=UTF-8
+  application:
+    name: demo-provider
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE (输出传入的sql参数)
+#    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE (输出返回的结果参数)
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
