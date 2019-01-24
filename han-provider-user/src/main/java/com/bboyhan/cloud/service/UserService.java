@@ -2,6 +2,8 @@ package com.bboyhan.cloud.service;
 
 import com.bboyhan.cloud.domain.User;
 
+import java.util.Optional;
+
 /**
  * @Auther: wushaohan
  * @Date: 2019/1/14 10:42
@@ -9,5 +11,5 @@ import com.bboyhan.cloud.domain.User;
  */
 public interface UserService {
 
-    User getUser(Long id);
+    Optional<User> getUser(Long id);
 }

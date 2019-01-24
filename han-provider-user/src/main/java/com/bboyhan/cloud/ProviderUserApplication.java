@@ -2,17 +2,15 @@ package com.bboyhan.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * @Auther: wushaohan
- * @Date: 2019/1/14 10:41
- * @Description:
+ * @Auther: bboyHan
+ * @Date: 2019/1/20 13:58
  */
 @SpringBootApplication
-@EnableEurekaClient
+@EnableDiscoveryClient
 public class ProviderUserApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ProviderUserApplication.class, args);
     }

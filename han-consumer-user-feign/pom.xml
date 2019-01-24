@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>han-consumer-user</artifactId>
+    <artifactId>han-consumer-user-feign</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -26,7 +26,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
         <dependency>
@@ -36,7 +36,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <dependency>
@@ -45,5 +45,4 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-
 </project>

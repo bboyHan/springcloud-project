@@ -1,20 +1,27 @@
 server:
-  port: 8002
+  port: 8001
+
 spring:
+  profiles:
+    active: dev
   application:
     name: han-provider-user
 
   jpa:
     generate-ddl: false
     show-sql: true
+    database: mysql
     hibernate:
       ddl-auto: none
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
   # 数据源配置
   datasource:
     platform: mysql
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/bboyhan?useUnicode=true&characterEncoding=UTF-8
+    # mysql6+ 需要配置此参数 serverTimezone
+    url: jdbc:mysql://localhost:3306/bboyhan?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
 
 logging:
   level:
@@ -23,15 +30,3 @@ logging:
 #    org.hibernate.type.descriptor.sql.BasicBinder: TRACE (输出传入的sql参数)
 #    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE (输出返回的结果参数)
 
-eureka:
-  client:
-    # 是否开启健康检查，默认为false
-    healthcheck:
-      enabled: true
-    serviceUrl:
-      defaultZone: http://root:root@localhost:8761/eureka
-  instance:
-    # 是否使用ip显示
-    prefer-ip-address: true
-    # 命名规则自定义
-    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}

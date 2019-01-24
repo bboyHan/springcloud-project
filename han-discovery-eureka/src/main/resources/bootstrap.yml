@@ -1,0 +1,15 @@
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+
+  client:
+    fetchRegistry: false
+    # 间隔5s拉取服务注册信息,默认30s
+#    registry-fetch-interval-seconds: 5
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://root:root@${eureka.instance.hostname}:${server.port}/eureka
+
+  server:
+    wait-time-in-ms-when-sync-empty: 0

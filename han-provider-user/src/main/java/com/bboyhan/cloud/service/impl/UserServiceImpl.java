@@ -6,6 +6,8 @@ import com.bboyhan.cloud.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * @Auther: wushaohan
  * @Date: 2019/1/14 10:54
@@ -18,7 +20,7 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public User getUser(Long id) {
-        return userRepository.findOne(id);
+    public Optional<User> getUser(Long id) {
+        return userRepository.findById(id);
     }
 }

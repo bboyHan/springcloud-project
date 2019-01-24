@@ -2,18 +2,14 @@
 server:
   port: 8761
 
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      # 类似Shell、Linux 中的user:password@ip:port 登录方式
-      defaultZone: http://root:root@localhost:8761/eureka
+spring:
+  security:
+    user:
+      name: root
+      password: root
 
-# 引入security，增加登录时需要账户密码(根据项目情况，可不添加)
-security:
-  basic:
-    enabled: true
-  user:
-    name: root
-    password: root
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

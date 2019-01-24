@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @Auther: wushaohan
- * @Date: 2019/1/14 13:46
- * @Description:
+ * @Auther: bboyHan
+ * @Date: 2019/1/20 16:27
  */
 @RestController
 public class UserController {
@@ -25,8 +24,9 @@ public class UserController {
     @GetMapping("/rest/user/{id}")
     public User getUser(@PathVariable Long id) {
         ServiceInstance serviceInstance = loadBalancerClient.choose("han-provider-user");
-        System.out.println("===" + ":" + serviceInstance.getServiceId() + ":" + serviceInstance.getHost() + ":" + serviceInstance.getPort());
-
+//        System.out.println("===" + ":" + serviceInstance.getServiceId() + ":" + serviceInstance.getHost() + ":" + serviceInstance.getPort());
         return restTemplate.getForObject("http://han-provider-user/user/" + id, User.class);
     }
+
+
 }
