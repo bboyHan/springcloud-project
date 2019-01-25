@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.bboyhan.feignclient</groupId>
     <artifactId>han-consumer-user-feign</artifactId>
     <packaging>jar</packaging>
 

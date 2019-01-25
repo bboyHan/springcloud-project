@@ -8,9 +8,9 @@
     <artifactId>han-project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>han-provider-user</module>
-        <module>han-consumer-user-ribbon</module>
         <module>han-discovery-eureka</module>
+        <module>han-provider-user</module>
+        <module>han-provider-search</module>
         <module>han-consumer-user-feign</module>
         <module>han-consumer-rabbitmq</module>
         <module>han-common-util</module>
