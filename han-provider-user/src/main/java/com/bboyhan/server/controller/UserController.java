@@ -1,6 +1,5 @@
 package com.bboyhan.server.controller;
 
-import com.bboyhan.server.model.User;
 import com.bboyhan.server.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +19,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/user/{id}")
-    public Optional<User> getUser(@PathVariable Long id) {
+    public Optional getUser(@PathVariable Long id) {
         return userService.getUser(id);
     }
 }

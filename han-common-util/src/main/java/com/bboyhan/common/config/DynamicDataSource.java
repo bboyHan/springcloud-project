@@ -1,4 +1,4 @@
-package com.bboyhan.common.config.dbsource;
+package com.bboyhan.common.config;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

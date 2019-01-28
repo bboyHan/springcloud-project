@@ -1,0 +1,18 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: han-consumer-ribbon
+
+# 数据源配置
+  datasource:
+    platform: mysql
+    username: root
+    password: root
+    # mysql6+ 需要配置此参数 serverTimezone
+    url: jdbc:mysql://localhost:3306/bboyhan?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+
+han-provider-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

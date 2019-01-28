@@ -16,6 +16,7 @@
 |------|------|------|
 | han-discovery-eureka | eureka服务发现  | 端口8761 |
 | han-consumer-user-feign | feign消费调用  | 端口9001 |
+| han-consumer-ribbon | ribbon客户端负载均衡（带fallback）  | 端口9002 |
 | han-provider-user | user server服务  | 端口8001 |
 | han-provider-search | elasticsearch服务  | 端口8011 |
 | han-consumer-rabbitmq | rabbitmq消息中间件 | 端口7901，正在完善... |

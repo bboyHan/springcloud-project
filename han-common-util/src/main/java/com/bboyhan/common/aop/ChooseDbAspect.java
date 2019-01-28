@@ -1,7 +1,7 @@
 package com.bboyhan.common.aop;
 
 import com.bboyhan.common.annotation.DbName;
-import com.bboyhan.common.config.dbsource.DynamicDataSourceContextHolder;
+import com.bboyhan.common.config.DynamicDataSourceContextHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;

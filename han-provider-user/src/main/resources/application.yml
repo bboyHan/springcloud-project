@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   profiles:
@@ -29,4 +29,3 @@ logging:
     org.hibernate: INFO
 #    org.hibernate.type.descriptor.sql.BasicBinder: TRACE (输出传入的sql参数)
 #    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE (输出返回的结果参数)
-

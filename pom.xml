@@ -14,6 +14,7 @@
         <module>han-consumer-user-feign</module>
         <module>han-consumer-rabbitmq</module>
         <module>han-common-util</module>
+        <module>han-consumer-ribbon</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -41,6 +42,31 @@
         </dependencies>
     </dependencyManagement>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+    </dependencies>
+
+
     <build>
         <plugins>
             <plugin>
@@ -49,12 +75,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-    </dependencies>
 </project>

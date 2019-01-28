@@ -8,6 +8,7 @@ public enum ResultCodeEnum {
 
     SUCCESS(1, "success"),
     ERROR(0, "error"),
+    BUSY(-1, "系统繁忙"),
     /**
      * 10000 - 19999 用户相关
      */
